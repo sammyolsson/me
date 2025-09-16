@@ -1,0 +1,80 @@
+:root {
+  --bg: #0b0c0f;
+  --text: #e6e8ee;
+  --muted: #aab0bf;
+  --accent: #7c9cff;
+  --card: #12141a;
+  --border: #262a39;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f8fb;
+    --text: #0e1222;
+    --muted: #4a5164;
+    --card: #ffffff;
+    --border: #e6e8f0;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+}
+main,
+header,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+section + section {
+  margin-top: 2rem;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0.5rem 0 1rem;
+}
+h2 {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 0.75rem;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+}
+a[href="#main"] {
+  position: absolute;
+  left: -9999px;
+}
+a[href="#main"]:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
